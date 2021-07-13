@@ -1,0 +1,419 @@
+% Usage:
+% * download https://web.stanford.edu/~hastie/ElemStatLearn/printings/ESLII_print12.pdf
+%   as 'in.pdf'
+% * store this file as 'out.tex', and compile as 'pdflatex out.tex'
+% * rename output file to e.g.
+%   'Hastie, Tibshirani and Friedman - The Elements of Statistical Learning.pdf'
+
+
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{geometry}
+%\geometry{papersize={170mm,257mm}}
+% You may uncomment the above line to create the book in the original size.
+% Otherwise, the output page size will be the defaul letter or A4, which
+% I prefer (extra margins for notes)
+
+\usepackage{pdfpages}
+\usepackage[
+  pdfpagelabels=true,
+  pdftitle={The Elements of Statistical Learning (2nd edition)},
+  pdfauthor={Trevor Hastie, Robert Tibshirani, Jerome Friedman},
+  pdfsubject={Mathematical statistics, Machine Learning, Data Mining},
+  pdfkeywords={supervised learning, machine learning, linear methods, prediction},
+  unicode=true,
+]{hyperref}
+\usepackage{bookmark}
+
+\begin{document}
+
+\pagenumbering{roman}
+\setcounter{page}{3}
+\includepdf[pages={1, {}}]{in.pdf}
+\includepdf[pages=2-19]{in.pdf}
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\includepdf[pages=20-]{in.pdf}
+
+\bookmark[page=1,level=0]{Cover}
+\bookmark[page=5,level=0]{Preface to the Second Edition}
+\bookmark[page=9,level=0]{Preface to the First Edition}
+\bookmark[page=11,level=0]{Contents}
+
+\bookmark[page=21,level=0]{1 Introduction}
+\bookmark[page=29,level=0]{2 Overview of Supervised Learning}
+  \bookmark[page=29,level=1]{2.1 Introduction}
+  \bookmark[page=29,level=1]{2.2 Variable Types and Terminology}
+  \bookmark[page=31,level=1]{2.3 Two Simple Approaches to Prediction: Least Squares and Nearest Neighbors}
+    \bookmark[page=31,level=2]{2.3.1 Linear Models and Least Squares}
+    \bookmark[page=34,level=2]{2.3.2 Nearest-Neighbor Methods}
+    \bookmark[page=36,level=2]{2.3.3 From Least Squares to Nearest Neighbors}
+  \bookmark[page=38,level=1]{2.4 Statistical Decision Theory}
+  \bookmark[page=42,level=1]{2.5 Local Methods in High Dimensions}
+  \bookmark[page=48,level=1]{2.6 Statistical Models, Supervised Learning and Function Approximation}
+    \bookmark[page=48,level=2]{2.6.1 A Statistical Model for the Joint Distribution Pr(X,Y)}
+    \bookmark[page=49,level=2]{2.6.2 Supervised Learning}
+    \bookmark[page=49,level=2]{2.6.3 Function Approximation}
+  \bookmark[page=52,level=1]{2.7 Structured Regression Models}
+    \bookmark[page=52,level=2]{2.7.1 Difficulty of the Problem}
+  \bookmark[page=53,level=1]{2.8 Classes of Restricted Estimators}
+    \bookmark[page=54,level=2]{2.8.1 Roughness Penalty and Bayesian Methods}
+    \bookmark[page=54,level=2]{2.8.2 Kernel Methods and Local Regression}
+    \bookmark[page=55,level=2]{2.8.3 Basis Functions and Dictionary Methods}
+  \bookmark[page=57,level=1]{2.9 Model Selection and the Bias–Variance Tradeoff}
+  \bookmark[page=59,level=1]{Bibliographic Notes}
+  \bookmark[page=59,level=1]{Exercises}
+\bookmark[page=63,level=0]{3 Linear Methods for Regression}
+  \bookmark[page=63,level=1]{3.1 Introduction}
+  \bookmark[page=64,level=1]{3.2 Linear Regression Models and Least Squares}
+    \bookmark[page=69,level=2]{3.2.1 Example: Prostate Cancer}
+    \bookmark[page=71,level=2]{3.2.2 The Gauss–Markov Theorem}
+    \bookmark[page=72,level=2]{3.2.3 Multiple Regression from Simple Univariate Regression}
+    \bookmark[page=76,level=2]{3.2.4 Multiple Outputs}
+  \bookmark[page=77,level=1]{3.3 Subset Selection}
+    \bookmark[page=77,level=2]{3.3.1 Best-Subset Selection}
+    \bookmark[page=78,level=2]{3.3.2 Forward- and Backward-Stepwise Selection}
+    \bookmark[page=80,level=2]{3.3.3 Forward-Stagewise Regression}
+    \bookmark[page=81,level=2]{3.3.4 Prostate Cancer Data Example (Continued)}
+  \bookmark[page=81,level=1]{3.4 Shrinkage Methods}
+    \bookmark[page=81,level=2]{3.4.1 Ridge Regression}
+    \bookmark[page=88,level=2]{3.4.2 The Lasso}
+    \bookmark[page=89,level=2]{3.4.3 Discussion: Subset Selection, Ridge Regression and the Lasso}
+    \bookmark[page=93,level=2]{3.4.4 Least Angle Regression}
+  \bookmark[page=99,level=1]{3.5 Methods Using Derived Input Directions}
+    \bookmark[page=99,level=2]{3.5.1 Principal Components Regression}
+    \bookmark[page=100,level=2]{3.5.2 Partial Least Squares}
+  \bookmark[page=102,level=1]{3.6 Discussion: A Comparison of the Selection and Shrinkage Methods}
+  \bookmark[page=104,level=1]{3.7 Multiple Outcome Shrinkage and Selection}
+  \bookmark[page=106,level=1]{3.8 More on the Lasso and Related Path Algorithms}
+    \bookmark[page=106,level=2]{3.8.1 Incremental Forward Stagewise Regression}
+    \bookmark[page=109,level=2]{3.8.2 Piecewise-Linear Path Algorithms}
+    \bookmark[page=109,level=2]{3.8.3 The Dantzig Selector}
+    \bookmark[page=110,level=2]{3.8.4 The Grouped Lasso}
+    \bookmark[page=111,level=2]{3.8.5 Further Properties of the Lasso}
+    \bookmark[page=112,level=2]{3.8.6 Pathwise Coordinate Optimization}
+  \bookmark[page=113,level=1]{3.9 Computational Considerations}
+  \bookmark[page=114,level=1]{Bibliographic Notes}
+  \bookmark[page=114,level=1]{Exercises}
+\bookmark[page=121,level=0]{4 Linear Methods for Classification}
+  \bookmark[page=121,level=1]{4.1 Introduction}
+  \bookmark[page=123,level=1]{4.2 Linear Regression of an Indicator Matrix}
+  \bookmark[page=126,level=1]{4.3 Linear Discriminant Analysis}
+    \bookmark[page=132,level=2]{4.3.1 Regularized Discriminant Analysis}
+    \bookmark[page=133,level=2]{4.3.2 Computations for LDA}
+    \bookmark[page=133,level=2]{4.3.3 Reduced-Rank Linear Discriminant Analysis}
+  \bookmark[page=139,level=1]{4.4 Logistic Regression}
+    \bookmark[page=140,level=2]{4.4.1 Fitting Logistic Regression Models}
+    \bookmark[page=142,level=2]{4.4.2 Example: South African Heart Disease}
+    \bookmark[page=144,level=2]{4.4.3 Quadratic Approximations and Inference}
+    \bookmark[page=145,level=2]{4.4.4 L1 Regularized Logistic Regression}
+    \bookmark[page=147,level=2]{4.4.5 Logistic Regression or LDA?}
+  \bookmark[page=149,level=1]{4.5 Separating Hyperplanes}
+    \bookmark[page=150,level=2]{4.5.1 Rosenblatt’s Perceptron Learning Algorithm}
+    \bookmark[page=152,level=2]{4.5.2 Optimal Separating Hyperplanes}
+  \bookmark[page=155,level=1]{Bibliographic Notes}
+  \bookmark[page=155,level=1]{Exercises}
+\bookmark[page=159,level=0]{5 Basis Expansions and Regularization}
+  \bookmark[page=159,level=1]{5.1 Introduction}
+  \bookmark[page=161,level=1]{5.2 Piecewise Polynomials and Splines}
+    \bookmark[page=164,level=2]{5.2.1 Natural Cubic Splines}
+    \bookmark[page=166,level=2]{5.2.2 Example: South African Heart Disease (Continued)}
+    \bookmark[page=168,level=2]{5.2.3 Example: Phoneme Recognition}
+  \bookmark[page=170,level=1]{5.3 Filtering and Feature Extraction}
+  \bookmark[page=171,level=1]{5.4 Smoothing Splines}
+    \bookmark[page=173,level=2]{5.4.1 Degrees of Freedom and Smoother Matrices}
+  \bookmark[page=176,level=1]{5.5 Automatic Selection of the Smoothing Parameters}
+    \bookmark[page=178,level=2]{5.5.1 Fixing the Degrees of Freedom}
+    \bookmark[page=178,level=2]{5.5.2 The Bias–Variance Tradeoff}
+  \bookmark[page=181,level=1]{5.6 Nonparametric Logistic Regression}
+  \bookmark[page=182,level=1]{5.7 Multidimensional Splines}
+  \bookmark[page=187,level=1]{5.8 Regularization and Reproducing Kernel Hilbert Spaces}
+    \bookmark[page=188,level=2]{5.8.1 Spaces of Functions Generated by Kernels}
+    \bookmark[page=190,level=2]{5.8.2 Examples of RKHS}
+  \bookmark[page=194,level=1]{5.9 Wavelet Smoothing}
+    \bookmark[page=196,level=2]{5.9.1 Wavelet Bases and the Wavelet Transform}
+    \bookmark[page=199,level=2]{5.9.2 Adaptive Wavelet Filtering}
+  \bookmark[page=201,level=1]{Bibliographic Notes}
+  \bookmark[page=201,level=1]{Exercises}
+  \bookmark[page=206,level=1]{Appendix: Computational Considerations for Splines}
+  \bookmark[page=206,level=1]{Appendix: B-splines}
+  \bookmark[page=209,level=1]{Appendix: Computations for Smoothing Splines}
+\bookmark[page=211,level=0]{6 Kernel Smoothing Methods}
+  \bookmark[page=212,level=1]{6.1 One-Dimensional Kernel Smoothers}
+    \bookmark[page=214,level=2]{6.1.1 Local Linear Regression}
+    \bookmark[page=217,level=2]{6.1.2 Local Polynomial Regression}
+  \bookmark[page=218,level=1]{6.2 Selecting the Width of the Kernel}
+  \bookmark[page=220,level=1]{6.3 Local Regression in IRp}
+  \bookmark[page=221,level=1]{6.4 Structured Local Regression Models in IRp}
+    \bookmark[page=223,level=2]{6.4.1 Structured Kernels}
+    \bookmark[page=223,level=2]{6.4.2 Structured Regression Functions}
+  \bookmark[page=225,level=1]{6.5 Local Likelihood and Other Models}
+  \bookmark[page=228,level=1]{6.6 Kernel Density Estimation and Classification}
+    \bookmark[page=228,level=2]{6.6.1 Kernel Density Estimation}
+    \bookmark[page=230,level=2]{6.6.2 Kernel Density Classification}
+    \bookmark[page=230,level=2]{6.6.3 The Naive Bayes Classifier}
+  \bookmark[page=232,level=1]{6.7 Radial Basis Functions and Kernels}
+  \bookmark[page=234,level=1]{6.8 Mixture Models for Density Estimation and Classification}
+  \bookmark[page=236,level=1]{6.9 Computational Considerations}
+  \bookmark[page=236,level=1]{Bibliographic Notes}
+  \bookmark[page=236,level=1]{Exercises}
+\bookmark[page=239,level=0]{7 Model Assessment and Selection}
+  \bookmark[page=239,level=1]{7.1 Introduction}
+  \bookmark[page=239,level=1]{7.2 Bias, Variance and Model Complexity}
+  \bookmark[page=243,level=1]{7.3 The Bias–Variance Decomposition}
+    \bookmark[page=246,level=2]{7.3.1 Example: Bias–Variance Tradeoff}
+  \bookmark[page=248,level=1]{7.4 Optimism of the Training Error Rate}
+  \bookmark[page=250,level=1]{7.5 Estimates of In-Sample Prediction Error}
+  \bookmark[page=252,level=1]{7.6 The Effective Number of Parameters}
+  \bookmark[page=253,level=1]{7.7 The Bayesian Approach and BIC}
+  \bookmark[page=255,level=1]{7.8 Minimum Description Length}
+  \bookmark[page=257,level=1]{7.9 Vapnik–Chervonenkis Dimension}
+    \bookmark[page=259,level=2]{7.9.1 Example (Continued)}
+  \bookmark[page=261,level=1]{7.10 Cross-Validation}
+    \bookmark[page=261,level=2]{7.10.1 K-Fold Cross-Validation}
+    \bookmark[page=265,level=2]{7.10.2 The Wrong and Right Way to Do Cross-validation}
+    \bookmark[page=267,level=2]{7.10.3 Does Cross-Validation Really Work?}
+  \bookmark[page=269,level=1]{7.11 Bootstrap Methods}
+    \bookmark[page=272,level=2]{7.11.1 Example (Continued)}
+  \bookmark[page=274,level=1]{7.12 Conditional or Expected Test Error?}
+  \bookmark[page=277,level=1]{Bibliographic Notes}
+  \bookmark[page=277,level=1]{Exercises}
+\bookmark[page=281,level=0]{8 Model Inference and Averaging}
+  \bookmark[page=281,level=1]{8.1 Introduction}
+  \bookmark[page=281,level=1]{8.2 The Bootstrap and Maximum Likelihood Methods}
+    \bookmark[page=281,level=2]{8.2.1 A Smoothing Example}
+    \bookmark[page=285,level=2]{8.2.2 Maximum Likelihood Inference}
+    \bookmark[page=287,level=2]{8.2.3 Bootstrap versus Maximum Likelihood}
+  \bookmark[page=287,level=1]{8.3 Bayesian Methods}
+  \bookmark[page=291,level=1]{8.4 Relationship Between the Bootstrap and Bayesian Inference}
+  \bookmark[page=292,level=1]{8.5 The EM Algorithm}
+    \bookmark[page=292,level=2]{8.5.1 Two-Component Mixture Model}
+    \bookmark[page=296,level=2]{8.5.2 The EM Algorithm in General}
+    \bookmark[page=297,level=2]{8.5.3 EM as a Maximization–Maximization Procedure}
+  \bookmark[page=299,level=1]{8.6 MCMC for Sampling from the Posterior}
+  \bookmark[page=302,level=1]{8.7 Bagging}
+    \bookmark[page=303,level=2]{8.7.1 Example: Trees with Simulated Data}
+  \bookmark[page=308,level=1]{8.8 Model Averaging and Stacking}
+  \bookmark[page=310,level=1]{8.9 Stochastic Search: Bumping}
+  \bookmark[page=312,level=1]{Bibliographic Notes}
+  \bookmark[page=313,level=1]{Exercises}
+\bookmark[page=315,level=0]{9 Additive Models, Trees, and Related Methods}
+  \bookmark[page=315,level=1]{9.1 Generalized Additive Models}
+    \bookmark[page=317,level=2]{9.1.1 Fitting Additive Models}
+    \bookmark[page=319,level=2]{9.1.2 Example: Additive Logistic Regression}
+    \bookmark[page=324,level=2]{9.1.3 Summary}
+  \bookmark[page=325,level=1]{9.2 Tree-Based Methods}
+    \bookmark[page=325,level=2]{9.2.1 Background}
+    \bookmark[page=327,level=2]{9.2.2 Regression Trees}
+    \bookmark[page=328,level=2]{9.2.3 Classification Trees}
+    \bookmark[page=330,level=2]{9.2.4 Other Issues}
+    \bookmark[page=333,level=2]{9.2.5 Spam Example (Continued)}
+  \bookmark[page=337,level=1]{9.3 PRIM: Bump Hunting}
+    \bookmark[page=340,level=2]{9.3.1 Spam Example (Continued)}
+  \bookmark[page=341,level=1]{9.4 MARS: Multivariate Adaptive Regression Splines}
+    \bookmark[page=346,level=2]{9.4.1 Spam Example (Continued)}
+    \bookmark[page=347,level=2]{9.4.2 Example (Simulated Data)}
+    \bookmark[page=348,level=2]{9.4.3 Other Issues}
+  \bookmark[page=349,level=1]{9.5 Hierarchical Mixtures of Experts}
+  \bookmark[page=352,level=1]{9.6 Missing Data}
+  \bookmark[page=354,level=1]{9.7 Computational Considerations}
+  \bookmark[page=354,level=1]{Bibliographic Notes}
+  \bookmark[page=355,level=1]{Exercises}
+\bookmark[page=357,level=0]{10 Boosting and Additive Trees}
+  \bookmark[page=357,level=1]{10.1 Boosting Methods}
+    \bookmark[page=360,level=2]{10.1.1 Outline of This Chapter}
+  \bookmark[page=361,level=1]{10.2 Boosting Fits an Additive Model}
+  \bookmark[page=362,level=1]{10.3 Forward Stagewise Additive Modeling}
+  \bookmark[page=363,level=1]{10.4 Exponential Loss and AdaBoost}
+  \bookmark[page=365,level=1]{10.5 Why Exponential Loss?}
+  \bookmark[page=366,level=1]{10.6 Loss Functions and Robustness}
+  \bookmark[page=370,level=1]{10.7 “Off-the-Shelf” Procedures for Data Mining}
+  \bookmark[page=372,level=1]{10.8 Example: Spam Data}
+  \bookmark[page=373,level=1]{10.9 Boosting Trees}
+  \bookmark[page=378,level=1]{10.10 Numerical Optimization via Gradient Boosting}
+    \bookmark[page=378,level=2]{10.10.1 Steepest Descent}
+    \bookmark[page=379,level=2]{10.10.2 Gradient Boosting}
+    \bookmark[page=380,level=2]{10.10.3 Implementations of Gradient Boosting}
+  \bookmark[page=381,level=1]{10.11 Right-Sized Trees for Boosting}
+  \bookmark[page=384,level=1]{10.12 Regularization}
+    \bookmark[page=384,level=2]{10.12.1 Shrinkage}
+    \bookmark[page=385,level=2]{10.12.2 Subsampling}
+  \bookmark[page=387,level=1]{10.13 Interpretation}
+    \bookmark[page=387,level=2]{10.13.1 Relative Importance of Predictor Variables}
+    \bookmark[page=389,level=2]{10.13.2 Partial Dependence Plots}
+  \bookmark[page=391,level=1]{10.14 Illustrations}
+    \bookmark[page=391,level=2]{10.14.1 California Housing}
+    \bookmark[page=395,level=2]{10.14.2 New Zealand Fish}
+    \bookmark[page=399,level=2]{10.14.3 Demographics Data}
+  \bookmark[page=400,level=1]{Bibliographic Notes}
+  \bookmark[page=404,level=1]{Exercises}
+\bookmark[page=409,level=0]{11 Neural Networks}
+  \bookmark[page=409,level=1]{11.1 Introduction}
+  \bookmark[page=409,level=1]{11.2 Projection Pursuit Regression}
+  \bookmark[page=412,level=1]{11.3 Neural Networks}
+  \bookmark[page=415,level=1]{11.4 Fitting Neural Networks}
+  \bookmark[page=417,level=1]{11.5 Some Issues in Training Neural Networks}
+    \bookmark[page=417,level=2]{11.5.1 Starting Values}
+    \bookmark[page=418,level=2]{11.5.2 Overfitting}
+    \bookmark[page=418,level=2]{11.5.3 Scaling of the Inputs}
+    \bookmark[page=420,level=2]{11.5.4 Number of Hidden Units and Layers}
+    \bookmark[page=420,level=2]{11.5.5 Multiple Minima}
+  \bookmark[page=421,level=1]{11.6 Example: Simulated Data}
+  \bookmark[page=424,level=1]{11.7 Example: ZIP Code Data}
+  \bookmark[page=428,level=1]{11.8 Discussion}
+  \bookmark[page=429,level=1]{11.9 Bayesian Neural Nets and the NIPS 2003 Challenge}
+    \bookmark[page=430,level=2]{11.9.1 Bayes, Boosting and Bagging}
+    \bookmark[page=432,level=2]{11.9.2 Performance Comparisons}
+  \bookmark[page=434,level=1]{11.10 Computational Considerations}
+  \bookmark[page=435,level=1]{Bibliographic Notes}
+  \bookmark[page=435,level=1]{Exercises}
+\bookmark[page=437,level=0]{12 Support Vector Machines and Flexible Discriminants}
+  \bookmark[page=437,level=1]{12.1 Introduction}
+  \bookmark[page=437,level=1]{12.2 The Support Vector Classifier}
+    \bookmark[page=440,level=2]{12.2.1 Computing the Support Vector Classifier}
+    \bookmark[page=441,level=2]{12.2.2 Mixture Example (Continued)}
+  \bookmark[page=443,level=1]{12.3 Support Vector Machines and Kernels}
+    \bookmark[page=443,level=2]{12.3.1 Computing the SVM for Classification}
+    \bookmark[page=446,level=2]{12.3.2 The SVM as a Penalization Method}
+    \bookmark[page=448,level=2]{12.3.3 Function Estimation and Reproducing Kernels}
+    \bookmark[page=451,level=2]{12.3.4 SVMs and the Curse of Dimensionality}
+    \bookmark[page=452,level=2]{12.3.5 A Path Algorithm for the SVM Classifier}
+    \bookmark[page=454,level=2]{12.3.6 Support Vector Machines for Regression}
+    \bookmark[page=456,level=2]{12.3.7 Regression and Kernels}
+    \bookmark[page=458,level=2]{12.3.8 Discussion}
+  \bookmark[page=458,level=1]{12.4 Generalizing Linear Discriminant Analysis}
+  \bookmark[page=460,level=1]{12.5 Flexible Discriminant Analysis}
+    \bookmark[page=464,level=2]{12.5.1 Computing the FDA Estimates}
+  \bookmark[page=466,level=1]{12.6 Penalized Discriminant Analysis}
+  \bookmark[page=469,level=1]{12.7 Mixture Discriminant Analysis}
+    \bookmark[page=471,level=2]{12.7.1 Example: Waveform Data}
+  \bookmark[page=475,level=1]{Bibliographic Notes}
+  \bookmark[page=475,level=1]{Exercises}
+\bookmark[page=479,level=0]{13 Prototype Methods and Nearest-Neighbors}
+  \bookmark[page=479,level=1]{13.1 Introduction}
+  \bookmark[page=479,level=1]{13.2 Prototype Methods}
+    \bookmark[page=480,level=2]{13.2.1 K-means Clustering}
+    \bookmark[page=482,level=2]{13.2.2 Learning Vector Quantization}
+    \bookmark[page=483,level=2]{13.2.3 Gaussian Mixtures}
+  \bookmark[page=483,level=1]{13.3 k-Nearest-Neighbor Classifiers}
+    \bookmark[page=488,level=2]{13.3.1 Example: A Comparative Study}
+    \bookmark[page=490,level=2]{13.3.2 Example: k-Nearest-Neighbors and Image Scene Classification}
+    \bookmark[page=491,level=2]{13.3.3 Invariant Metrics and Tangent Distance}
+  \bookmark[page=495,level=1]{13.4 Adaptive Nearest-Neighbor Methods}
+    \bookmark[page=498,level=2]{13.4.1 Example}
+    \bookmark[page=499,level=2]{13.4.2 Global Dimension Reduction for Nearest-Neighbors}
+  \bookmark[page=500,level=1]{13.5 Computational Considerations}
+  \bookmark[page=501,level=1]{Bibliographic Notes}
+  \bookmark[page=501,level=1]{Exercises}
+\bookmark[page=505,level=0]{14 Unsupervised Learning}
+  \bookmark[page=505,level=1]{14.1 Introduction}
+  \bookmark[page=507,level=1]{14.2 Association Rules}
+    \bookmark[page=508,level=2]{14.2.1 Market Basket Analysis}
+    \bookmark[page=509,level=2]{14.2.2 The Apriori Algorithm}
+    \bookmark[page=512,level=2]{14.2.3 Example: Market Basket Analysis}
+    \bookmark[page=515,level=2]{14.2.4 Unsupervised as Supervised Learning}
+    \bookmark[page=517,level=2]{14.2.5 Generalized Association Rules}
+    \bookmark[page=519,level=2]{14.2.6 Choice of Supervised Learning Method}
+    \bookmark[page=519,level=2]{14.2.7 Example: Market Basket Analysis (Continued)}
+  \bookmark[page=521,level=1]{14.3 Cluster Analysis}
+    \bookmark[page=523,level=2]{14.3.1 Proximity Matrices}
+    \bookmark[page=523,level=2]{14.3.2 Dissimilarities Based on Attributes}
+    \bookmark[page=525,level=2]{14.3.3 Object Dissimilarity}
+    \bookmark[page=527,level=2]{14.3.4 Clustering Algorithms}
+    \bookmark[page=527,level=2]{14.3.5 Combinatorial Algorithms}
+    \bookmark[page=529,level=2]{14.3.6 K-means}
+    \bookmark[page=530,level=2]{14.3.7 Gaussian Mixtures as Soft K-means Clustering}
+    \bookmark[page=532,level=2]{14.3.8 Example: Human Tumor Microarray Data}
+    \bookmark[page=534,level=2]{14.3.9 Vector Quantization}
+    \bookmark[page=535,level=2]{14.3.10 K-medoids}
+    \bookmark[page=538,level=2]{14.3.11 Practical Issues}
+    \bookmark[page=540,level=2]{14.3.12 Hierarchical Clustering}
+  \bookmark[page=548,level=1]{14.4 Self-Organizing Maps}
+  \bookmark[page=554,level=1]{14.5 Principal Components, Curves and Surfaces}
+    \bookmark[page=554,level=2]{14.5.1 Principal Components}
+    \bookmark[page=561,level=2]{14.5.2 Principal Curves and Surfaces}
+    \bookmark[page=564,level=2]{14.5.3 Spectral Clustering}
+    \bookmark[page=567,level=2]{14.5.4 Kernel Principal Components}
+    \bookmark[page=570,level=2]{14.5.5 Sparse Principal Components}
+  \bookmark[page=573,level=1]{14.6 Non-negative Matrix Factorization}
+    \bookmark[page=574,level=2]{14.6.1 Archetypal Analysis}
+  \bookmark[page=577,level=1]{14.7 Independent Component Analysis and Exploratory Projection Pursuit}
+    \bookmark[page=578,level=2]{14.7.1 Latent Variables and Factor Analysis}
+    \bookmark[page=580,level=2]{14.7.2 Independent Component Analysis}
+    \bookmark[page=585,level=2]{14.7.3 Exploratory Projection Pursuit}
+    \bookmark[page=585,level=2]{14.7.4 A Direct Approach to ICA}
+  \bookmark[page=590,level=1]{14.8 Multidimensional Scaling}
+  \bookmark[page=592,level=1]{14.9 Nonlinear Dimension Reduction and Local Multidimensional Scaling}
+  \bookmark[page=596,level=1]{14.10 The Google PageRank Algorithm}
+  \bookmark[page=598,level=1]{Bibliographic Notes}
+  \bookmark[page=599,level=1]{Exercises}
+\bookmark[page=607,level=0]{15 Random Forests}
+  \bookmark[page=607,level=1]{15.1 Introduction}
+  \bookmark[page=607,level=1]{15.2 Definition of Random Forests}
+  \bookmark[page=612,level=1]{15.3 Details of Random Forests}
+    \bookmark[page=612,level=2]{15.3.1 Out of Bag Samples}
+    \bookmark[page=613,level=2]{15.3.2 Variable Importance}
+    \bookmark[page=615,level=2]{15.3.3 Proximity Plots}
+    \bookmark[page=616,level=2]{15.3.4 Random Forests and Overfitting}
+  \bookmark[page=617,level=1]{15.4 Analysis of Random Forests}
+    \bookmark[page=617,level=2]{15.4.1 Variance and the De-Correlation Effect}
+    \bookmark[page=620,level=2]{15.4.2 Bias}
+    \bookmark[page=621,level=2]{15.4.3 Adaptive Nearest Neighbors}
+  \bookmark[page=622,level=1]{Bibliographic Notes}
+  \bookmark[page=623,level=1]{Exercises}
+\bookmark[page=625,level=0]{16 Ensemble Learning}
+  \bookmark[page=625,level=1]{16.1 Introduction}
+  \bookmark[page=627,level=1]{16.2 Boosting and Regularization Paths}
+    \bookmark[page=627,level=2]{16.2.1 Penalized Regression}
+    \bookmark[page=630,level=2]{16.2.2 The “Bet on Sparsity” Principle}
+    \bookmark[page=633,level=2]{16.2.3 Regularization Paths, Over-fitting and Margins}
+  \bookmark[page=636,level=1]{16.3 Learning Ensembles}
+    \bookmark[page=637,level=2]{16.3.1 Learning a Good Ensemble}
+    \bookmark[page=642,level=2]{16.3.2 Rule Ensembles}
+  \bookmark[page=643,level=1]{Bibliographic Notes}
+  \bookmark[page=644,level=1]{Exercises}
+\bookmark[page=645,level=0]{17 Undirected Graphical Models}
+  \bookmark[page=645,level=1]{17.1 Introduction}
+  \bookmark[page=647,level=1]{17.2 Markov Graphs and Their Properties}
+  \bookmark[page=650,level=1]{17.3 Undirected Graphical Models for Continuous Variables}
+    \bookmark[page=651,level=2]{17.3.1 Estimation of the Parameters when the Graph Structure is Known}
+    \bookmark[page=655,level=2]{17.3.2 Estimation of the Graph Structure}
+  \bookmark[page=658,level=1]{17.4 Undirected Graphical Models for Discrete Variables}
+    \bookmark[page=659,level=2]{17.4.1 Estimation of the Parameters when the Graph Structure is Known}
+    \bookmark[page=661,level=2]{17.4.2 Hidden Nodes}
+    \bookmark[page=662,level=2]{17.4.3 Estimation of the Graph Structure}
+    \bookmark[page=663,level=2]{17.4.4 Restricted Boltzmann Machines}
+  \bookmark[page=665,level=1]{Exercises}
+\bookmark[page=669,level=0]{18 High-Dimensional Problems: p≫N}
+  \bookmark[page=669,level=1]{18.1 When p is Much Bigger than N}
+  \bookmark[page=671,level=1]{18.2 Diagonal Linear Discriminant Analysis and Nearest Shrunken Centroids}
+  \bookmark[page=674,level=1]{18.3 Linear Classifiers with Quadratic Regularization}
+    \bookmark[page=676,level=2]{18.3.1 Regularized Discriminant Analysis}
+    \bookmark[page=677,level=2]{18.3.2 Logistic Regression with Quadratic Regularization}
+    \bookmark[page=677,level=2]{18.3.3 The Support Vector Classifier}
+    \bookmark[page=678,level=2]{18.3.4 Feature Selection}
+    \bookmark[page=679,level=2]{18.3.5 Computational Shortcuts When p≫N}
+  \bookmark[page=681,level=1]{18.4 Linear Classifiers with L1 Regularization}
+    \bookmark[page=684,level=2]{18.4.1 Application of Lasso to Protein Mass Spectroscopy}
+    \bookmark[page=686,level=2]{18.4.2 The Fused Lasso for Functional Data}
+  \bookmark[page=688,level=1]{18.5 Classification When Features are Unavailable}
+    \bookmark[page=688,level=2]{18.5.1 Example: String Kernels and Protein Classification}
+    \bookmark[page=690,level=2]{18.5.2 Classification and Other Models Using Inner-Product Kernels and Pairwise Distances}
+    \bookmark[page=692,level=2]{18.5.3 Example: Abstracts Classification}
+  \bookmark[page=694,level=1]{18.6 High-Dimensional Regression: Supervised Principal Components}
+    \bookmark[page=698,level=2]{18.6.1 Connection to Latent-Variable Modeling}
+    \bookmark[page=700,level=2]{18.6.2 Relationship with Partial Least Squares}
+    \bookmark[page=701,level=2]{18.6.3 Pre-Conditioning for Feature Selection}
+  \bookmark[page=703,level=1]{18.7 Feature Assessment and the Multiple-Testing Problem}
+    \bookmark[page=707,level=2]{18.7.1 The False Discovery Rate}
+    \bookmark[page=710,level=2]{18.7.2 Asymmetric Cutpoints and the SAM Procedure}
+    \bookmark[page=712,level=2]{18.7.3 A Bayesian Interpretation of the FDR}
+  \bookmark[page=713,level=1]{18.8 Bibliographic Notes}
+  \bookmark[page=714,level=1]{Exercises}
+\bookmark[page=719,level=0]{References}
+\bookmark[page=749,level=0]{Author Index}
+\bookmark[page=757,level=0]{Index}
+
+\end{document}
